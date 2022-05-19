@@ -4,17 +4,17 @@ import co.com.sofka.domain.generic.Command;
 import co.com.sofka.practiceddd.person.values.Name;
 import co.com.sofka.practiceddd.person.values.PersonId;
 
-public class ChangeName extends Command {
-    private final PersonId personId;
+public class CreatePerson extends Command {
+    private final PersonId entityId;
     private final Name name;
 
-    public ChangeName(PersonId personId, Name name) {
-        this.personId = personId;
+    public CreatePerson(PersonId entityId, Name name) {
+        this.entityId = entityId;
         this.name = name;
     }
 
-    public PersonId personId() {
-        return personId;
+    public PersonId entityId() {
+        return entityId;
     }
 
     public Name name() {
